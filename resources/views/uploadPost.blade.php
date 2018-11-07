@@ -8,13 +8,11 @@ upload post
 @section('content')
 
 <div class="container text-center">
-  <div class="container">
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-success">
         <div class="panel-heading">Upload Post</div>
 
         <div class="panel-body">
-          <div class="row">
             <div class="col-lg-5 center_div">
 
               @if(session()->has('message'))
@@ -91,13 +89,11 @@ upload post
               </form>
             </div>
 
-          </div>
         </div>
 
       </div>
     </div>
   </div>
-</div>
 
 
 @endsection

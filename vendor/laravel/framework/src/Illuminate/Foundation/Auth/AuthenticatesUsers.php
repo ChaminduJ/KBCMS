@@ -1,10 +1,9 @@
 <?php
 
 namespace Illuminate\Foundation\Auth;
-use Carbon\Carbon;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\ValidationException;
 
 trait AuthenticatesUsers
@@ -50,8 +49,6 @@ trait AuthenticatesUsers
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
-
-
     }
 
     /**
@@ -79,7 +76,6 @@ trait AuthenticatesUsers
         return $this->guard()->attempt(
             $this->credentials($request), $request->filled('remember')
         );
-
     }
 
     /**
@@ -101,11 +97,6 @@ trait AuthenticatesUsers
      */
     protected function sendLoginResponse(Request $request)
     {
-        $user_id = Auth::user() -> id;
-        $user = User::find($user_id );
-        $user -> online = 1;
-        $user -> updated_at = Carbon::now();
-        $user-> save();
         $request->session()->regenerate();
 
         $this->clearLoginAttempts($request);
@@ -159,17 +150,11 @@ trait AuthenticatesUsers
      */
     public function logout(Request $request)
     {
-        $user_id = Auth::user() -> id;
-        $user = User::find($user_id );
-        $user -> online = 0;
-        $user -> updated_at = Carbon::now();
-        $user-> save();
+        $this->guard()->logout();
 
-       $this->guard()->logout();
+        $request->session()->invalidate();
 
-      Session::flush();
-      // redirect to homepage
-      return redirect('/')->with('message','Successfully Logged Out...!!!');
+        return redirect('/');
     }
 
     /**

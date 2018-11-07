@@ -8,7 +8,7 @@ Home page
 
 <div class="text-center">
   <div class="row">
-    <div class="col-sm-3 well">
+    <div class="col-lg-3 col-md-6 col-sm-12">
       <div class="well">
         <p><a href="profile">My Profile</a></p>
         @foreach($data as $key => $data)
@@ -29,17 +29,13 @@ Home page
           <span class="label label-danger">Friends</span>
         </p>
       </div>
-      <div class="alert alert-success fade in">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-        <p><strong>Ey!</strong></p>
-        People are looking at your profile. Find out who.
-      </div>
+
       <a href="{{ url('/chat') }}">Chat</a>
       <p><a href="uploadPost">Post</a></p>
       <p><a href="reset">Reset</a></p>
     </div>
     <div data-spy="scroll" data-target="#posts" data-offset="0" class="scrollspy-posts">
-      <div class="col-sm-6" id="posts">
+      <div class="col-sm-12 col-md-6 col-lg-6" id="posts">
 
         <div class="row">
           <div class="col-sm-12">
@@ -94,8 +90,8 @@ Home page
         </div>
       </div>
     </div>
-    <div class="col-last well pull-right">
-      <div class="thumbnail">
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="row">
 
         @foreach($info as $key => $info)
 

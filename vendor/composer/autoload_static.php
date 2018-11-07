@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit62e3b7445038186fe6cc84398942b559
+class ComposerStaticInit55a9a869937e45aba2301eea44aa2acf
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -14,9 +14,9 @@ class ComposerStaticInit62e3b7445038186fe6cc84398942b559
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
-        '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
+        '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -113,8 +113,8 @@ class ComposerStaticInit62e3b7445038186fe6cc84398942b559
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -348,6 +348,7 @@ class ComposerStaticInit62e3b7445038186fe6cc84398942b559
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Mail\\VerifyMail' => __DIR__ . '/../..' . '/app/Mail/VerifyMail.php',
         'App\\Notifications\\UserRegisteredSuccessfully' => __DIR__ . '/../..' . '/app/Notifications/UserRegisteredSuccessfully.php',
         'App\\Notifications\\YouAreSuccessfullyLoggedOut' => __DIR__ . '/../..' . '/app/Notifications/You are successfully logged out..!.php',
         'App\\Picture' => __DIR__ . '/../..' . '/app/Picture.php',
@@ -358,6 +359,7 @@ class ComposerStaticInit62e3b7445038186fe6cc84398942b559
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\VerifyUser' => __DIR__ . '/../..' . '/app/VerifyUser.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
@@ -3702,11 +3704,11 @@ class ComposerStaticInit62e3b7445038186fe6cc84398942b559
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit62e3b7445038186fe6cc84398942b559::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit62e3b7445038186fe6cc84398942b559::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit62e3b7445038186fe6cc84398942b559::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit62e3b7445038186fe6cc84398942b559::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit62e3b7445038186fe6cc84398942b559::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit55a9a869937e45aba2301eea44aa2acf::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit55a9a869937e45aba2301eea44aa2acf::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit55a9a869937e45aba2301eea44aa2acf::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit55a9a869937e45aba2301eea44aa2acf::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit55a9a869937e45aba2301eea44aa2acf::$classMap;
 
         }, null, ClassLoader::class);
     }

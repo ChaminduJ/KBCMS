@@ -23,6 +23,7 @@ Route::get('/chat','ChatController@index')->middleware('auth')->name('chat.index
 Route::get('/chat/{id}','ChatController@show')->middleware('auth')->name('chat.show');
 Route::post('/chat/getChat/{id}','ChatController@getChat')->middleware('auth');
 Route::post('/chat/sendChat','ChatController@sendChat')->middleware('auth');
+
 Route::get('/profile', 'ProfileController@profile')->middleware('auth');
 
 Route::get('/picture', function () {
@@ -59,3 +60,4 @@ route::post('/uploadPost',[
   'uses'=>'PostController@uploadPost',
   'as'=>'uploadPost'
 ]);
+Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');

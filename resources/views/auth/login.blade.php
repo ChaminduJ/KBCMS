@@ -9,11 +9,17 @@ Login page
 
 <div class="columns is-marginless is-centered">
   <div class="column is-5">
-    @if(session()->has('message'))
-    <div class="alert alert-success">
-      {{session()->get('message')}}
-    </div>@endif
     <div class="card center">
+      @if (session('status'))
+      <div class="alert alert-success">
+        {{ session('status') }}
+      </div>
+      @endif
+      @if (session('warning'))
+      <div class="alert alert-warning">
+        {{ session('warning') }}
+      </div>
+      @endif
       <header class="card-header">
         <p class="card-header-title">Login</p>
       </header>
@@ -90,6 +96,10 @@ Login page
             </div>
           </div>
         </form>
+        @if(session()->has('message'))
+        <div class="alert alert-success">
+          {{session()->get('message')}}
+        </div>@endif
       </div>
     </div>
   </div>

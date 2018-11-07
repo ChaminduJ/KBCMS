@@ -2,6 +2,8 @@
   .panel-block{
     flex-direction: column;
     border: none;
+    max-height: 470px;
+    /* height: 470px; */
   }
   .chat{
     width: 100%;
@@ -17,6 +19,7 @@
     box-shadow: 0 0 8px 0px grey;
     padding: 8px;
     margin: 4px;
+    display: inline-block;
   }
   .chat-right{
     float: right;
@@ -58,4 +61,5 @@
     export default {
     props:['chats','userid','receiverid']
     }
+    
 </script>

@@ -8,7 +8,7 @@ use Illuminate\Auth\Events\Registered;
 
 trait RegistersUsers
 {
-    // use RedirectsUsers;
+    use RedirectsUsers;
 
     /**
      * Show the application registration form.
@@ -36,7 +36,6 @@ trait RegistersUsers
 
         return $this->registered($request, $user)
                         ?: redirect($this->redirectPath());
-
     }
 
     /**

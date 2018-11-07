@@ -16,7 +16,8 @@ class ChatController extends Controller
      */
     public function index()
     {
-      $receiver = Auth::User()->get();
+      $receiver = User::where('id', '!=', auth()->id())->get();
+;
       return view('chat.index',['receiver' => $receiver])->withUser($receiver);
     }
 

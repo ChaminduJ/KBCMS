@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
+
 <div class="container">
   <div class="column is-8 is-offset-2">
-    <div class="panel">
+    <div class="panel col-lg-6 col-md-6 col-sm-12">
       <div class="panel-heading">
         List of all Users
         <a href="/home" class="pull-right">Back</a>
@@ -16,6 +18,9 @@
       @endforeach
 
     </div>
+
   </div>
 </div>
+
+
 @endsection

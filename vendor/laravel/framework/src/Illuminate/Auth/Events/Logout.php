@@ -25,5 +25,4 @@ class Logout
     {
         $this->user = $user;
     }
-
 }
